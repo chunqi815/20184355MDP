@@ -31,6 +31,7 @@ public class LoginPage extends AppCompatActivity {
                 }else
                     //incorrect
                     Toast.makeText(LoginPage.this,"LOGIN FAILED PLEASE TRY AGAIN",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(LoginPage.this, JournalPage.class));
             }
     });
 
