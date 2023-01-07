@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class JournalPage extends AppCompatActivity {
+public class TimelinePage extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
 
@@ -20,7 +20,7 @@ public class JournalPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_journal_page);
+        setContentView(R.layout.activity_timeline_page);
 
         bottomNavigationView  = findViewById(R.id.bottom_navigation);
 

@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         MaterialButton createAccountBtn = (MaterialButton) findViewById(R.id.createAccountBtn);
 
+        // directs to Create Account Page on clicked
         createAccountBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         MaterialButton logInBtn = (MaterialButton) findViewById(R.id.logInBtn);
+
+        // directs to Log In Page on clicked
         logInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

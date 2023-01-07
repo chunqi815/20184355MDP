@@ -25,13 +25,14 @@ public class LoginPage extends AppCompatActivity {
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //allows user to log in even if username and password is incorrect for app demo
                 if(username.getText().toString().equals("admin") && password.getText().toString().equals("admin")){
                     //correct
-                    startActivity(new Intent(LoginPage.this, JournalPage.class));
+                    startActivity(new Intent(LoginPage.this, TimelinePage.class));
                 }else
                     //incorrect
                     Toast.makeText(LoginPage.this,"LOGIN FAILED PLEASE TRY AGAIN",Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(LoginPage.this, JournalPage.class));
+                    startActivity(new Intent(LoginPage.this, TimelinePage.class));
             }
     });
 
