@@ -1,8 +1,14 @@
 package com.example.a20184355mdp;
 
+
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,6 +40,8 @@ public class TimelineFragment extends Fragment {
 
     MaterialButton addNoteBtn;
     RecyclerView recyclerView;
+    MaterialButton notifyBtn;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,6 +70,23 @@ public class TimelineFragment extends Fragment {
             @Override
             public void onChange(RealmResults<JournalEntry> notes) {
                 myAdapter.notifyDataSetChanged();
+            }
+        });
+
+        notifyBtn = (MaterialButton)rootView .findViewById(R.id.notifybtn);
+        notifyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(),"My Notification");
+                builder.setContentTitle("Reminder");
+                builder.setContentText("Don't forget to write your journal today!");
+                builder.setSmallIcon(R.drawable.ic_launcher_background);
+                builder.setAutoCancel(true);
+
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getActivity());
+                managerCompat.notify(1,builder.build());
+
             }
         });
         return rootView;
