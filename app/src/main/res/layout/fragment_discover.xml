@@ -11,4 +11,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/startmeditationbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="230dp"
+        android:backgroundTint="#5499C7"
+        android:text="Start"
+        android:textColor="#FFFFFF" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/startstoicismbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="440dp"
+        android:backgroundTint="#5499C7"
+        android:text="Start"
+        android:textColor="#FFFFFF" />
+
+
 </RelativeLayout>
